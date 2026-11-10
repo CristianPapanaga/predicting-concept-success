@@ -19,7 +19,6 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "output"
 LOGS_DIR = OUTPUT_DIR / "logs"
 FIGURES_DIR = OUTPUT_DIR / "figures"
-PLOTS_SVG_DIR = OUTPUT_DIR / "plots_svg"
 TABLES_DIR = OUTPUT_DIR / "tables"
 
 
@@ -377,7 +376,6 @@ __all__ = [
     "FIGURES_DIR",
     "LOGS_DIR",
     "OUTPUT_DIR",
-    "PLOTS_SVG_DIR",
     "PROJECT_ROOT",
     "TABLES_DIR",
     "MarkdownLog",

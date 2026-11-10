@@ -434,11 +434,6 @@ def _plot_residual_grid(
     path = output_dir / filename
     fig.savefig(path, dpi=150, bbox_inches="tight")
 
-    svg_dir = log_writer.PLOTS_SVG_DIR
-    svg_dir.mkdir(parents=True, exist_ok=True)
-    svg_name = Path(filename).stem + ".svg"
-    fig.savefig(svg_dir / svg_name, bbox_inches="tight")
-
     plt.close(fig)
     return path
 
@@ -849,11 +844,6 @@ def plot_roc_curves(
     path = output_dir / filename
     fig.savefig(path, dpi=150, bbox_inches="tight")
 
-    svg_dir = log_writer.PLOTS_SVG_DIR
-    svg_dir.mkdir(parents=True, exist_ok=True)
-    svg_name = Path(filename).stem + ".svg"
-    fig.savefig(svg_dir / svg_name, bbox_inches="tight")
-
     plt.close(fig)
     return path
 
@@ -929,11 +919,6 @@ def plot_calibration(
 
     path = output_dir / filename
     fig.savefig(path, dpi=150, bbox_inches="tight")
-
-    svg_dir = log_writer.PLOTS_SVG_DIR
-    svg_dir.mkdir(parents=True, exist_ok=True)
-    svg_name = Path(filename).stem + ".svg"
-    fig.savefig(svg_dir / svg_name, bbox_inches="tight")
 
     plt.close(fig)
     return path
@@ -1131,11 +1116,6 @@ def plot_cost_benefit_sensitivity(
 
     path = output_dir / filename
     fig.savefig(path, dpi=150, bbox_inches="tight")
-
-    svg_dir = log_writer.PLOTS_SVG_DIR
-    svg_dir.mkdir(parents=True, exist_ok=True)
-    svg_name = Path(filename).stem + ".svg"
-    fig.savefig(svg_dir / svg_name, bbox_inches="tight")
 
     plt.close(fig)
     return path

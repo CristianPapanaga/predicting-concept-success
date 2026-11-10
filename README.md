@@ -47,8 +47,6 @@ analysis/             the analysis code
 output/
   logs/                 exploration.md + modelling.md (the supporting analysis file)
   figures/              PNG figures
-  plots/                PDF figures
-  plots_svg/            SVG figures
   tables/               PowerPoint table exports
 presentation.pptx      the project deck (slides + speaker notes)
 ```
