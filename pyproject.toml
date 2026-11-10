@@ -1,0 +1,18 @@
+[project]
+name = "predicting-concept-success"
+version = "0.1.0"
+description = "Does adding behavioural and implicit measures improve concept-screening launch decisions? An end-to-end analysis of a sample concept-test dataset."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Cristian Papanaga" },
+]
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyampute",
+    "python-pptx>=1.0.2",
+    "scipy>=1.17.1",
+    "statsmodels>=0.15.0",
+]
