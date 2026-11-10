@@ -34,6 +34,30 @@ and repeat purchase. See `data/data_dictionary.csv` for full field definitions a
 **Recommendation:** pilot **Behavioural as standard**, test **Implicit on a subset**, and
 **randomise** so the next round of evidence is causal.
 
+## AI-first workflow
+
+This project was built end-to-end with an **AI-first workflow** — the way a growing number of
+analytics and engineering teams now work. An AI coding assistant drafted every stage (data loading
+and cleaning, exploration, modelling, cost–benefit analysis, visualisation, and the written logs),
+and **every step was manually reviewed and corrected before being accepted**.
+
+The analysis is structured so the AI's reasoning stays out of the results, which minimises the
+opportunity for hallucination:
+
+- **The AI writes code, not conclusions.** Every number, table, and figure is produced by the
+  committed `analysis/*.py` scripts running on `data/` and written to `output/`. The assistant's
+  job was to write and run that code, so its reasoning is visible, reviewable, and re-runnable —
+  never hidden in a black box.
+- **The results are reproducible.** `analysis/exploration.py` and `analysis/modelling.py`
+  regenerate the logs and figures from the raw data, so any claim can be traced back to the code
+  that produced it.
+- **Human verification at every step.** Outputs were checked against the data dictionary and the
+  raw data — dtypes, missingness, sample sizes, and the direction and magnitude of every reported
+  effect — so errors and hallucinations were caught and fixed before reaching the final output.
+
+The goal is to demonstrate the analysis and the workflow together: using AI to move fast while
+keeping a human in the loop and keeping the output fully auditable.
+
 ## Repository structure
 
 ```
